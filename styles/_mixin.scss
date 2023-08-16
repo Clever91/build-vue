@@ -1,0 +1,50 @@
+// Адаптивное свойство (формула)
+$maxWidth: 1920;
+$maxWidthContainer: 1920;
+
+@mixin adaptive-value($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+	@media (max-width: #{$maxWidthContainer + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+	}
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin burger {
+	@media (max-width: $breakpoints-custom) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 38px;
+		z-index: 100;
+		background-color: transparent;
+		span {
+			top: 17px;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			background-color: #ffffff;
+			&:first-child {
+				top: 9px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 10px;
+				width: 100%;
+				right: 0;
+			}
+			transition: var(--transition);
+		}
+	}
+}

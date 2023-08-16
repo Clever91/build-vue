@@ -1,0 +1,40 @@
+:root {
+	//? Colors
+	--color-primary: #ffffff;
+	--color-secondary: #4f555a;
+	--bg-main-color: #14162e;
+
+	// Hover color
+	--hover-primary: #bdbaba;
+
+	// Helper color
+	--helper-color-light: #ffffff;
+	//? FontFamily
+	--font-primary: "Moula", sans-serif;
+	--font-weightPrimary: 400;
+	--font-weightAny: 700;
+
+	//? Radius
+	--radius-primary: 10px;
+	--radius-any: 30px;
+
+	//? Size font
+	--size-small: 16px;
+	--size-any: 18px;
+	--size-primary: 20px;
+	--size-secondary: 24px;
+	--size-medium: 28px;
+
+	//? Any vars
+	--transition: all 0.3s ease;
+	--box-shadow: 8px 8px 23px rgba(255, 250, 250, 0.36);
+}
+
+// width
+$breakpoints-0: 1550px;
+$breakpoints-1: 1300px;
+$breakpoints-custom: 1080px;
+$breakpoints-2: 992px;
+$breakpoints-3: 767px;
+$breakpoints-4: 575px;
+$breakpoints-5: 400px;

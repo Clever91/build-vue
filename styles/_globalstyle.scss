@@ -1,0 +1,122 @@
+/* Global Style main */
+@import "vars.scss";
+@import "mixin.scss";
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	width: 100%;
+	max-width: 1920px;
+	padding: 0 150px;
+	margin: 0 auto;
+	@media (max-width: $breakpoints-0) {
+		padding: 0 75px;
+	}
+	@media (max-width: $breakpoints-1) {
+		padding: 0 15px;
+	}
+}
+
+.logo {
+	display: block;
+	&__wrap {
+		display: block;
+		width: 190px;
+		height: 63px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		@media (max-width: $breakpoints-3) {
+			width: 100px;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.body-lock {
+	overflow: hidden;
+}
+
+//! Components big
+.title {
+	font-weight: 700;
+	line-height: normal;
+}
+
+.title-primary {
+	@include adaptive-value("font-size", 64, 35);
+}
+.title-secondary {
+	@include adaptive-value("font-size", 32, 18);
+}
+.title-any {
+	@include adaptive-value("font-size", 40, 30);
+}
+.title-other {
+	@include adaptive-value("font-size", 28, 20);
+}
+
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 56px;
+	padding: 5px 25px;
+	font-size: var(--size-primary);
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+	transition: var(--transition);
+	flex-shrink: 0;
+	background-color: transparent;
+	cursor: pointer;
+	background-color: #4461f2;
+	border-radius: var(--radius-primary);
+	color: #ffffff;
+}
+
+.btn--primary {
+	box-shadow: 0px 12px 21px 4px rgba(68, 97, 242, 0.15);
+	&:hover {
+		background-color: #5c76f7;
+	}
+}
+
+.btn--primary-height {
+	min-height: 63px;
+	@media (max-width: $breakpoints-3) {
+		min-height: 56px;
+	}
+}
+
+.btn--any {
+	border: 1px solid var(--helper-color-light);
+	min-height: 37px;
+	background-color: transparent;
+	&:hover {
+		background-color: var(--helper-color-light);
+		color: var(--color-secondary);
+	}
+}
+
+.btn--any-height {
+	min-height: 63px;
+	@media (max-width: $breakpoints-3) {
+		min-height: 56px;
+	}
+}

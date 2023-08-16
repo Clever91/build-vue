@@ -1,0 +1,97 @@
+.mb-medium {
+	@include adaptive-value("margin-bottom", 50, 30);
+}
+.mb-small {
+	margin-bottom: 25px;
+}
+.mb-big {
+	@include adaptive-value("margin-bottom", 100, 50);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.box-shadow-primary {
+	box-shadow: var(--box-shadow);
+}
+.radius-primary {
+	border-radius: var(--radius-primary);
+}
+.letter-spacing {
+	letter-spacing: 5px;
+}
+.block-mb {
+	& > *:not(:last-child) {
+		margin-bottom: 25px;
+	}
+}
+.font-bold {
+	font-weight: 700;
+}
+.line-height-big {
+	line-height: 160%;
+}
+.size-small-any {
+	font-size: 14px;
+}
+.opacity-medium {
+	opacity: 0.4;
+}
+.size-small {
+	font-size: var(--size-small);
+}
+.width-full {
+	width: 100%;
+}
+.link-hover {
+	transition: var(--transition);
+	&:hover {
+		color: var(--hover-primary);
+	}
+}
+.ind {
+	@include adaptive-value("padding-top", 190, 110);
+	@include adaptive-value("padding-bottom", 65, 40);
+}
+.ind-inner {
+	padding: 120px 0;
+	@media (max-width: $breakpoints-3) {
+		padding: 50px 0;
+	}
+}
+table.table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	height: auto;
+	@media (max-width: $breakpoints-3) {
+		min-width: 900px;
+		overflow-x: auto;
+	}
+}
+table.table {
+	text-align: center;
+	font-size: 16px;
+}
+table.table tr.accent-color.font-big td {
+	font-size: 18px;
+}
+table.table tr.accent-color td {
+	color: #dda82a;
+	font-weight: 700;
+}
+table.table tbody tr:not(.accent-color) td {
+	opacity: 0.8;
+	border-top: 1px solid #fff;
+}
+table.table td,
+table.table th {
+	padding: 10px;
+}
